@@ -5,7 +5,6 @@ class Solution:
         :rtype: int
         """
         
-        rs = 0
         first = 0
         second = 1
         
