@@ -5,7 +5,7 @@ class Solution(object):
         :type minutesToDie: int
         :type minutesToTest: int
         :rtype: int
-        """
+        
         times = minutesToTest // minutesToDie
         
         for pig in range(1, buckets):
@@ -13,4 +13,8 @@ class Solution(object):
                 return pig
             
         return 0
+        """
+	times = minutesToTest // minutesToDie
         
+        # (times + 1) ** pigs >= buckets
+        return int(math.ceil(math.log(buckets, times+1)))
